@@ -1,0 +1,23 @@
+INPUTS input_0 input_1
+CONST_INPUTS rotate_1
+OUTPUTS output
+
+input_0 input_1 MULTIPLY prod_r0
+
+prod_r0 rotate_1 ROTATE prod_r1
+prod_r0 prod_r1 ADD prod_s1
+
+prod_r1 rotate_1 ROTATE prod_r2
+prod_s1 prod_r2 ADD prod_s2
+
+prod_r2 rotate_1 ROTATE prod_r3
+prod_s2 prod_r3 ADD prod_s3
+
+prod_r3 rotate_1 ROTATE prod_r4
+prod_s3 prod_r4 ADD prod_s4
+
+prod_r4 rotate_1 ROTATE prod_r5
+prod_s4 prod_r5 ADD prod_s5
+
+prod_r5 rotate_1 ROTATE prod_r6
+prod_s5 prod_r6 ADD output
